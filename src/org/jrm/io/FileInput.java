@@ -63,7 +63,7 @@ public class FileInput
      */
     public String readLine()
     {
-        String rString;
+        String rString = null;
 
         try
         {
@@ -76,4 +76,17 @@ public class FileInput
         return rString;
     }
 
+    /**
+     * Close file that is opened by constructor
+     */
+    public void fileClose() {
+        if (in != null) {
+            try {
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 }

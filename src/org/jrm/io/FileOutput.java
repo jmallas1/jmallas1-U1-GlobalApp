@@ -15,9 +15,8 @@ public class FileOutput
     /**
      * Constructor for FileOutput
      * @param filePath String containing a full or relative path to a file
-     * @throws FileNotFoundException when file is absent or unreadable
      */
-    public FileOutput(String filePath) throws FileNotFoundException {
+    public FileOutput(String filePath) {
         this.filePath = filePath;
 
         try
@@ -27,7 +26,6 @@ public class FileOutput
         catch(FileNotFoundException e)
         {
             System.out.println("Unable to open file for write: " + filePath + " "  + e);
-            throw e;
         }
     }
 
@@ -46,5 +44,19 @@ public class FileOutput
         {
             System.out.println("File Write Error: " + filePath + " "  + e);
         }
+    }
+
+    /**
+     * Closes file that is opened by constructor
+     */
+    public void fileClose() {
+        if (out != null) {
+            try {
+                out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 }
