@@ -35,6 +35,6 @@ class StuffRecordTest {
     void genListFromFileIO()
     {
         ArrayList testList = srt.genListFromFileIO(fi);
-        assertEquals(1000, testList.size(), "Array list should have 500 items.");
+        assertEquals(1000, testList.size(), "Array list should have 1000 items.");
     }
 }
