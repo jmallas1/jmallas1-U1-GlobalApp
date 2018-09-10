@@ -7,6 +7,11 @@ import org.jrm.io.FileInput;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Main class to demonstrate Unit 1 concepts
+ * @author Jared Mallas
+ * @version 1.0
+ */
 public class Main {
 
 
