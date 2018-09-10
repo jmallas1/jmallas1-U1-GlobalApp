@@ -40,6 +40,39 @@ public class Main {
             idHash.put("CITIES", cityHash);
             countryHash.put(place.getCountry(), idHash);
         }
-        System.out.println("hi");
+
+        for(StuffRecord stuff : stuffs)
+        {
+            if (countryHash.containsKey(stuff.getCountry()))
+            {
+                idHash = countryHash.get(stuff.getCountry());
+                if(idHash.containsKey("STUFFS"))
+                {
+                    stuffHash = idHash.get("STUFFS");
+                }
+                else
+                {
+                    stuffHash = new HashMap<String, String>();
+                }
+
+            }
+            else
+            {
+                idHash = new HashMap<String, HashMap>();
+                stuffHash = new HashMap<String, String>();
+            }
+            stuffHash.put(stuff.getThing(), "X");
+            idHash.put("STUFFS", stuffHash);
+            countryHash.put(stuff.getCountry(), idHash);
+        }
+
+        System.out.format("%22s  %5s  %7s\n","COUNTRY","CITY COUNT", "STUFF");
+        System.out.format("%22s  %5s  %7s\n","=======","==========", "=====");
+
+        for (String country : countryHash.keySet())
+        {
+            System.out.format("%22s  %5s  %10s\n",country, countryHash.get(country).get("CITIES").size(), countryHash.get(country).get("STUFFS").size());
+            // System.out.println(country + "===>" + countryHash.get(country).get("CITIES").size() + "===>" + countryHash.get(country).get("STUFFS").size());
+        }
     }
 }
