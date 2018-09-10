@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"org.jrm.io","l":"FileInput"},{"p":"org.jrm.io","l":"FileOutput"},{"p":"org.jrm","l":"Main"},{"p":"org.jrm.data","l":"PlaceRecord"},{"p":"org.jrm.data","l":"StuffRecord"}]
