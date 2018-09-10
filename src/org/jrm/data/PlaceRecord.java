@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author Jared Mallas
  * @version 1.0
  */
-public class PlaceRecord
+public class PlaceRecord implements Comparable<PlaceRecord>
 {
     private String country;
     private String city;
@@ -56,6 +56,16 @@ public class PlaceRecord
         }
         in.fileClose();
         return rList;
+    }
+
+    /**
+     * Override of compareTo. When comparing these objects, only compare the countries
+     * @param o the PlaceRecord to compare
+     * @return results of comparison
+     */
+    @Override
+    public int compareTo(PlaceRecord o) {
+        return this.getCountry().compareTo(o.getCountry());
     }
 
     /* Getters and setters*/

@@ -9,18 +9,18 @@ import java.util.ArrayList;
  * @author Jared Mallas
  * @version 1.0
  */
-public class StuffRecord
+public class StuffRecord implements Comparable<StuffRecord>
 {
-    private String city;
+    private String country;
     private String thing;
 
     /**
      * Constructor for Stuff record
-     * @param city City from stuff file
+     * @param country City from stuff file
      * @param thing one thing of many stuffs
      */
-    public StuffRecord(String city, String thing) {
-        this.city = city;
+    public StuffRecord(String country, String thing) {
+        this.country = country;
         this.thing = thing;
     }
 
@@ -47,14 +47,23 @@ public class StuffRecord
         return rList;
     }
 
+    /**
+     * Override of compareTo method. When comparing StuffRecords, only compare countries
+     * @param o The StuffRecord to compare
+     * @return results of comparison
+     */
+    @Override
+    public int compareTo(StuffRecord o) {
+        return this.getCountry().compareTo(o.getCountry());
+    }
     /* Getters and setters */
 
-    public String getCity() {
-        return city;
+    public String getCountry() {
+        return country;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public String getThing() {
