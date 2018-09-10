@@ -8,18 +8,15 @@ import java.util.ArrayList;
 
 public class Main {
 
+
     public static void main(String[] args)
     {
-        String line;
-        String[] workingArray;
-        ArrayList<PlaceRecord> places = new ArrayList<>();
-        ArrayList<StuffRecord> stuffs = new ArrayList<>();
+        PlaceRecord pr = new PlaceRecord();
+        StuffRecord sr = new StuffRecord();
 
-        FileInput placeFI = new FileInput("places.csv");
-        while((line = placeFI.readLine()) != null)
-        {
-            workingArray = line.split(",");
-            // places.add(new PlaceRecord())
-        }
+        ArrayList<PlaceRecord> places = pr.genListFromFileIO(new FileInput("places.csv"));
+        ArrayList<StuffRecord> stuffs = sr.genListFromFileIO(new FileInput("stuff.csv"));
+
+        System.out.println("hi");
     }
 }

@@ -54,6 +54,7 @@ public class PlaceRecord
             fields = line.split(",");
             rList.add(new PlaceRecord(fields[0], fields[1], fields[2], fields[3]));
         }
+        in.fileClose();
         return rList;
     }
 

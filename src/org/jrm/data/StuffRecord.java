@@ -43,6 +43,7 @@ public class StuffRecord
             fields = line.split(",");
             rList.add(new StuffRecord(fields[0], fields[1]));
         }
+        in.fileClose();
         return rList;
     }
 
