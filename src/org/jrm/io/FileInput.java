@@ -15,7 +15,6 @@ public class FileInput
     /**
      * Constructor for FileInput
      * @param filePath String containing a full or relative path to a readable file
-     * @throws FileNotFoundException when file is absent or unreadable
      */
     public FileInput(String filePath)
     {
@@ -34,7 +33,6 @@ public class FileInput
     /**
      * Method to read an entire file into a String
      * @return String containing the contents of a file
-     * @throws IOException when bad stuff happens
      */
     public String readFile()
     {

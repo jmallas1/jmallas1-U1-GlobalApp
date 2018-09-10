@@ -41,6 +41,7 @@ public class PlaceRecord implements Comparable<PlaceRecord>
 
     /**
      * Generate a list of PlaceRecord objects from a FileInput object pointed at given csv
+     * @param in FileInput object to read data from
      * @return ArrayList of PlaceRecords
      */
     public ArrayList<PlaceRecord> genListFromFileIO(FileInput in)
